@@ -47,6 +47,6 @@ class ATM:
             else:
                 print("Opción no válida. Por favor, intenta de nuevo.")
 
-# Crear una instancia del cajero
+# instancia del cajero
 atm = ATM(initial_balance=10000)
 atm.run()

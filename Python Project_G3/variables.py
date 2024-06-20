@@ -1,49 +1,44 @@
-
-"""
+# Variables y tipos de datos
 name = "Pedro"
 lastName: str = "Castro"
-number: int = "dos"
+number: str = "dos"  # Cambiado a str ya que "dos" no es un número
 
-print(type(number))
+print(type(number))  # str
 
-note= 4.5
-print(type(note))
+note = 4.5
+print(type(note))  # float
 
 age = 29
-print(type(age))
+print(type(age))  # int
 
 isActive = True
+print(type(isActive))  # bool
 
+ages = [15, 19, 29, 21, 30]
+print(type(ages))  # list
 
-print(type(isActive))
+week_days = ("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo")
+print(type(week_days))  # tuple
 
-ages = [15, 19,29,21, 30]
-
-print(type(ages))
-
-week_days = ("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo")
-print(type(week_days))
-
-user = {"Name": "Maria", "Age": 19 }
-print(type(user))
+user = {"Name": "Maria", "Age": 19}
+print(type(user))  # dict
 
 notes = {4.5, 2.8, 4.0, 3.5}
-print(type(notes))
-"""
-from unittest import result
+print(type(notes))  # set
 
-
-num1 = int(input("Agregue el numero 1 y sumelo con el 2"))
-sum = num1 + 2
-#print("El Resultado Es", sum)
-
-print(f"El resultado es{sum}")
-
-def sum2(num1):
+# Función para sumar 2 a un número dado
+def sum2(num1: int) -> int:
     num2 = 2
     return num1 + num2
-    result = sum2(num1)
 
-print(f"El resultado de la suma es {result}")
+# Solicitar número al usuario y realizar la suma
+try:
+    num1 = int(input("Agregue el numero 1 y súmelo con el 2: "))
+    result = sum2(num1)
+    print(f"El resultado es {result}")
+except ValueError:
+    print("Por favor, ingrese un número válido.")
+
+
 
 
